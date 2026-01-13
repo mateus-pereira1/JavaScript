@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Nacionalidade</title>
+</head>
+<body>
+    <h1>Desafio da Nacionalidade</h1>
+    Digite sua nacionalidade: <input type="text" class="txtNacionalidade">
+    <input type="button" value="verificar" onclick="verificar()">
+
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var txtNacionalidade = window.document.querySelector('input.txtNacionalidade');
+            var nacionalidade = txtNacionalidade.value
+
+            var res = window.document.getElementById('res')
+
+            res.innerHTML = `Nascido em ${nacionalidade}`
+
+            if(nacionalidade == 'brasil'){
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            } else{
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
